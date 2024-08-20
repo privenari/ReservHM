@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar'; //barra superior de hora y bateria, se utiliza con estilo automatico (black/white)
 import React from 'react'; //por default hay que tenerlo
-import { StyleSheet, Text, View, TextInput } from 'react-native'; //nos permite crear la función y guardarla en la variable styles
+import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native'; //nos permite crear la función y guardarla en la variable styles
 
 //div = view
 
@@ -8,7 +8,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Bienvenido</Text>
-      <Text style={styles.subtitulo}>Ingresa tu correo</Text>
+      <Text style={styles.subtitulo}>Accede a tu cuenta</Text>
       <TextInput 
         placeholder='usuario@gmail.com'
         style={styles.texto_inputs}
@@ -21,6 +21,9 @@ export default function App() {
       <Text style={styles.olvidaste_contraseña}>Olvidaste tu contraseña</Text>
       <Text style={styles.olvidaste_contraseña}>¿No tienes una cuenta?</Text>
       <StatusBar style="auto" /> 
+      <TouchableOpacity style={styles.boton}>
+        <Text style={{fontSize: 17, fontWeight: '400', color: 'grey', fontFamily: 'System',}}>Ingresar</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -60,7 +63,16 @@ const styles = StyleSheet.create({
     fontFamily: 'System',
     color: 'gray',
     marginTop: 20,
-  }
+  },
+  boton : {
+    width: 180,
+    height: 40,
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginVertical: 10,
+    backgroundColor: 'white'
+  },
 
 
 
