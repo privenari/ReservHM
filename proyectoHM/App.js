@@ -37,8 +37,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={Inicio} />
-        <Stack.Screen name="RecuperarClave" component={RecuperarClave} />
+        <Stack.Screen name="Home" component={Inicio} options={{ headerShown: false }}/>
+        <Stack.Screen name="RecuperarClave" component={RecuperarClave} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
