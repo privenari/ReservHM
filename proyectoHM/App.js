@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Navigation from './Navigation';
 import RecuperarClave from './ventanas/RecuperarClave';
 import Login from './ventanas/Login';
+import HomeScreen from './ventanas/HomeScreen';
 
 const Stack = createStackNavigator();
 
@@ -15,6 +16,7 @@ export default function App() {
         <Stack.Screen name='Login' component={Login} options={{ headerShown: false }} />
         <Stack.Screen name="RecuperarClave" component={RecuperarClave} options={{ headerShown: false }} />
         <Stack.Screen name="Navigation" component={Navigation} options={{ headerShown: false }} />
+        <Stack.Screen name='HomeScreen' component={HomeScreen} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
